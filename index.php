@@ -7,8 +7,16 @@
 </head>
 <body>
   <?php
-    echo "<b>Hello</b> world";
-    echo "<br> My first \"<b>php<b>\" site";
+    define("JOPA0", "Ahahahha");
+
+    echo JOPA0;
+
+    $Jopa = 5;//int
+    $Jopa2 = -0.35;//float
+    $Jopa3 = "Jopa";//string
+    $Jopa4 = true;//boolean
+
+    echo $Jopa3." --> ".$Jopa.$Jopa2.$Jopa3;
   ?>
 </body>
 </html>
