@@ -7,32 +7,15 @@
 </head>
 <body>
   <?php
-    $jopa1 = 10;
-    $jopa2 = 20;
+    $jopa1 = "Hello";
 
-    echo $jopa1 + $jopa2."<br>";
-    echo $jopa1 - $jopa2."<br>";
-    echo $jopa1 * $jopa2."<br>";
-    echo $jopa1 / $jopa2."<br>";
-    echo $jopa1 % $jopa2."<br>";
+    echo "var: $jopa1"."<br>";
+    echo 'var: $jopa'."<br>";
+    echo "<input type='text'>"."<br>";
 
-    $jopa1 += 10;
-    echo $jopa1."<br>";
+    $jopa2 = strlen($jopa1);
     
-    $jopa1++;
-    echo $jopa1."<br>";
-
-    echo M_PI."<br>";
-    echo M_E."<br>";
-    
-    echo abs(-13)."<br>";
-    echo ceil(3.1)."<br>";
-
-    $jopa3 = mt_rand(1,20);
-
-    echo $jopa3."<br>";
-
-
+    echo $jopa2."<br>";
   ?>
 </body>
 </html>
