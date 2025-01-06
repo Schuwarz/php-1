@@ -3,20 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PHP</title>
+  <title>My first PHP steps</title>
 </head>
 <body>
   <?php
-    define("JOPA0", "Ahahahha");
+    $jopa1 = 10;
+    $jopa2 = 20;
 
-    echo JOPA0;
+    echo $jopa1 + $jopa2."<br>";
+    echo $jopa1 - $jopa2."<br>";
+    echo $jopa1 * $jopa2."<br>";
+    echo $jopa1 / $jopa2."<br>";
+    echo $jopa1 % $jopa2."<br>";
 
-    $Jopa = 5;//int
-    $Jopa2 = -0.35;//float
-    $Jopa3 = "Jopa";//string
-    $Jopa4 = true;//boolean
+    $jopa1 += 10;
+    echo $jopa1."<br>";
+    
+    $jopa1++;
+    echo $jopa1."<br>";
 
-    echo $Jopa3." --> ".$Jopa.$Jopa2.$Jopa3;
+    echo M_PI."<br>";
+    echo M_E."<br>";
+    
+    echo abs(-13)."<br>";
+    echo ceil(3.1)."<br>";
+
+    $jopa3 = mt_rand(1,20);
+
+    echo $jopa3."<br>";
+
+
   ?>
 </body>
 </html>
