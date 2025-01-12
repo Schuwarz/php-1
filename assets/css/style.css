@@ -1,0 +1,83 @@
+/* Основные стили страницы */
+body {
+  background-color: #f0f0f0; /* светлый фон */
+  font-family: 'Arial', sans-serif; /* стандартный шрифт */
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Обертка для всего контента */
+.wrapper {
+  background-color: midnightblue; /* темный фон */
+  color: deeppink; /* яркий цвет текста */
+  max-width: 800px; /* ограниченная ширина */
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  border: 5px solid #fff; /* белая рамка вокруг */
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2); /* тень для выделения */
+}
+
+.title h1 {
+  font-size: 2em; /* больший размер шрифта для заголовка */
+  font-weight: bold;
+  text-transform: uppercase; /* заглавные буквы */
+  margin: 20px 0;
+  color: deeppink; /* яркий цвет для заголовка */
+}
+
+/* Стили для формы */
+.form {
+  margin: 20px 0;
+}
+
+.form__btn button {
+  font-size: 1.2em;
+  color: white;
+  background-color: #008CBA; /* голубая кнопка */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase; /* текст на кнопке в верхнем регистре */
+}
+.form__btn button:hover {
+  background-color: #005f73; /* темный цвет при наведении */
+}
+
+/* Стили для блока с результатом */
+.result__text {
+  font-size: 1.5em;
+  color: lime; /* яркий цвет для текста */
+  font-weight: bold;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* тень для текста */
+}
+
+.result__text--failure {
+  color:aqua;
+}
+
+/* Дополнительное оформление для страницы */
+a {
+  color: deeppink;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: yellow;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.8em;
+  color: gray;
+}

@@ -4,34 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Random Number Generator</title>
 </head>
 
 <body>
+  <main class="main">
 
-  <h1>Try to generate random number: 3, 5 or 7!)))</h1>
+    <section class="section">
+      <div class="wrapper">
+        <div class="title">
+          <h1>Try to generate random number: 3, 5 or 7!)))</h1>
+        </div>
 
-  <form method="POST">
-    <button type="submit" name="generatedNumber">Generate New Nimber</button>
-  </form>
-  <!-- Кнопка, которая отправляет данные о нажатии методом POST -->
+        <div class="form">
+          <form method="POST">
+            <div class="form__btn">
+              <button type="submit" name="generatedNumber">Generate New Nimber</button>
+            </div>
+          </form>
+          <!-- Кнопка, которая отправляет данные о нажатии методом POST -->
+        </div>
 
-  <?php
-  // Подключаем файл с логикой генерации числа
-  include __DIR__ . '/includes/logic.php';
+        <div class="result">
+          <?php
+          // Подключаем файл с логикой генерации числа
+          include __DIR__ . '/includes/logic.php';
+          // Отображаем результат, если число было сгенерированно
+          if ($generatedNumber !== null):
+            echo "<p class='result__text'>Randomated number: $generatedNumber </p><br>";
+          endif;
 
-  // Отображаем результат, если число было сгенерированно
-  if ($generatedNumber !== null):
-    echo "<p>Randomated number: $generatedNumber </p><br>";
-  endif;
+          // Подключаем файл с поздравлениями
 
-  // Подключаем файл с поздравлениями
+          include __DIR__ . '/includes/Congratulations.php';
 
-  include __DIR__ . '/includes/Congratulations.php';
-
-  // Подключаем файл для обработки сообщений
-  include __DIR__ . '/includes/messages.php';
-  ?>
+          // Подключаем файл для обработки сообщений
+          include __DIR__ . '/includes/messages.php';
+          ?>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer></footer>
 
 </body>
 
