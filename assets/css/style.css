@@ -4,6 +4,7 @@ body {
   font-family: 'Arial', sans-serif; /* стандартный шрифт */
   margin: 0;
   padding: 0;
+  cursor: progress;
 }
 
 .main {
