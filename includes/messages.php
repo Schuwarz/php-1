@@ -1,15 +1,15 @@
 <?php
 // Messages.php
-  switch ($Jopa) {
+switch ($generatedNumber) {
 
-    case 3: // Показываем поздравление только если число 3 было сгенерировано
-    case 5: // Показываем поздравление только если число 5 было сгенерировано
-    case 7: // Показываем поздравление только если число 7 было сгенерировано
-      echo "<p>Congrats, u'r randomate number: $Jopa </p>";
-      break;
+  case 3: // Показываем поздравление, если число 3
+  case 5: // Показываем поздравление, если число 5
+  case 7: // Показываем поздравление, если число 7
+    echo "<p>{$congratulationsMessages[$randomCongratulation]} $generatedNumber</p>";
+    break;
 
-    default: // Говорим, что лох, если не получилось
-      echo "<p>$Loh</p>";
-      break;
-  }
-  ?>
+  default: // Сообщение на случай, если число не 3, 5 или 7
+    echo "<p>$failureMessage</p>";
+    break;
+}
+?>

@@ -4,28 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Number randomatin'</title>
+  <title>Random Number Generator</title>
 </head>
 
 <body>
 
-  <h1>Try to randomate number 3 or 5 or 7!)))</h1>
+  <h1>Try to generate random number: 3, 5 or 7!)))</h1>
 
   <form method="POST">
-    <button type="submit" name="Pipa">Randomate a new nimber</button>
+    <button type="submit" name="generatedNumber">Generate New Nimber</button>
   </form>
-  <!-- Кнопка с именем Pipa, которая отправляет данные о нажатии методом POST -->
+  <!-- Кнопка, которая отправляет данные о нажатии методом POST -->
 
   <?php
-  // Подключаем файл с логикой из папки includes
+  // Подключаем файл с логикой генерации числа
   include __DIR__ . '/includes/logic.php';
 
-  // Отображаем результат
-  if ($Jopa !== null):
-    echo "<p>Randomated number: $Jopa </p><br>";
+  // Отображаем результат, если число было сгенерированно
+  if ($generatedNumber !== null):
+    echo "<p>Randomated number: $generatedNumber </p><br>";
   endif;
 
-  // Подключаем файл для обработки результата
+  // Подключаем файл с поздравлениями
+
+  include __DIR__ . '/includes/Congratulations.php';
+
+  // Подключаем файл для обработки сообщений
   include __DIR__ . '/includes/messages.php';
   ?>
 
