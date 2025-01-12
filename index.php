@@ -41,12 +41,13 @@
 
           // Подключаем файл для обработки сообщений
           include __DIR__ . '/includes/messages.php';
+
           ?>
         </div>
       </div>
     </section>
   </main>
-  
+
   <footer></footer>
 
 </body>

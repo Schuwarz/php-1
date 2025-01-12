@@ -23,4 +23,24 @@ $matrix = [
 ];
 
 echo $matrix[1][2];
-?>
+
+//Циклы
+//Цикл For
+for($i = 0; $i < 10; $i++)
+echo $i.'<br>';
+//Цикл While
+$i = 1;
+while($i <= 10) {
+echo $i.'<br>';
+$i++;
+}
+//Цикл Do While
+do {
+
+} while();
+//Перебор массива
+$list = [4,65,7,3,46];
+
+for ($i = 0; $i < count($list); $i++)
+    echo "Element $i: $list[$i]";
+  ?>
