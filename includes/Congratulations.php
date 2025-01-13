@@ -10,4 +10,10 @@ $congratulationsMessages = [
 
 // Генерация случайного поздравления
 $randomCongratulation = rand(1, 5);
+
+// Перебор массива с поздравлениями и вывод каждого
+echo "<h2>All possible congratulations messages:</h2>";
+foreach ($congratulationsMessages as $key => $message) {
+  echo "<p>Message $key: $message</p>";
+}
 ?>

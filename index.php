@@ -14,16 +14,16 @@
     <section class="section">
       <div class="wrapper">
         <div class="title">
-          <h1>Try to generate random number: 3, 5 or 7!)))</h1>
+          <h1>Try to generate random number: 3, 5 or 7!</h1>
         </div>
 
         <div class="form">
           <form method="POST">
             <div class="form__btn">
-              <button type="submit" name="generatedNumber">Generate New Nimber</button>
+              <button type="submit" name="generatedNumber" value="for">Generate using FOR loop</button>
+              <button type="submit" name="generatedNumber" value="while">Generate using WHILE loop</button>
             </div>
           </form>
-          <!-- Кнопка, которая отправляет данные о нажатии методом POST -->
         </div>
 
         <div class="result">
@@ -32,7 +32,7 @@
           include __DIR__ . '/includes/logic.php';
           // Отображаем результат, если число было сгенерированно
           if ($generatedNumber !== null):
-            echo "<p class='result__text'>Randomated number: $generatedNumber </p><br>";
+            echo "<p class='result__text'>Randomated number: $generatedNumber </p>";
           endif;
 
           // Подключаем файл с поздравлениями

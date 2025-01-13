@@ -1,6 +1,6 @@
 /* Основные стили страницы */
 body {
-  background-color: #f0f0f0; /* светлый фон */
+  background-color: dimgray;
   font-family: 'Arial', sans-serif; /* стандартный шрифт */
   margin: 0;
   padding: 0;
@@ -54,6 +54,7 @@ body {
 }
 
 /* Стили для блока с результатом */
+
 .result__text {
   font-size: 1.5em;
   color: lime; /* яркий цвет для текста */

@@ -35,12 +35,23 @@ echo $i.'<br>';
 $i++;
 }
 //Цикл Do While
+$i = 100;
 do {
-
-} while();
+  echo $i;
+} while($i < 10);
 //Перебор массива
 $list = [4,65,7,3,46];
 
 for ($i = 0; $i < count($list); $i++)
     echo "Element $i: $list[$i]";
+
+$list = ["age" => 45, "name" => "Alex", "hobby" => "football"];
+$arr = [2,4,4,23,4,3,4,3];
+
+foreach ($arr as $value) 
+  echo "Value: $value";
+
+foreach ($list as $item => $value) {
+  echo "Key: $item. Value: $value.<br>";
+}
   ?>
