@@ -54,4 +54,17 @@ foreach ($arr as $value)
 foreach ($list as $item => $value) {
   echo "Key: $item. Value: $value.<br>";
 }
-  ?>
+
+//Функции
+function info($word) {
+  echo "$word<br>";
+}
+
+info("Hellow"); // Вызов функции с параметром
+
+function math($x, $y) {
+  $res = $x + $y;
+  info ($res);
+}
+
+math(2, 5);

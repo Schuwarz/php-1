@@ -1,41 +1,35 @@
 <?php
-// Инициализация переменных
 $generatedNumber = null; // Переменная для сгенерированного числа
 $failureMessage = "Ahaha goofy, try again."; // Сообщение, если не удалось сгенерировать нужное число
 
-// Проверяем, была ли нажата кнопка для генерации числа
 if (isset($_POST["generatedNumber"])) {
-    $loopType = $_POST["generatedNumber"]; // Сохраняем тип цикла
+    $loopType = $_POST["generatedNumber"]; // Получаем тип цикла
+
+    // Переменная, ограничивающая количество попыток
+    $maxAttempts = 100;
 
     if ($loopType == "for") {
+        // Цикл FOR
+        for ($i = 1; $i <= $maxAttempts; $i++) {
+            $generatedNumber = rand(1, 10); // Генерируем случайное число
 
-
-        // Цикл FOR, генерируем числа
-        for ($i = 1; $i <= 100; $i++) {
-            $generatedNumber = rand(1, 10);
-            echo "<p>Generated number: $generatedNumber</p>";
-
-            // Прерываем цикл, если число 3 или 5
-            if ($generatedNumber == 3 || $generatedNumber == 5) {
-                echo "<p>Stopped generating because we got: $generatedNumber</p>";
+            // Прерываем цикл, если число 3, 5 или 7
+            if (in_array($generatedNumber, [3, 5, 7])) {
                 break; // Прерываем цикл, если получили 3 или 5
             }
         }
     } elseif ($loopType == "while") {
-        // Цикл WHILE, генерируем числа
+        // Цикл WHILE
         $i = 0;
-        while ($i < 100) {
+        while ($i < $maxAttempts) {
             $generatedNumber = rand(1, 10);
             $i++;
 
             // Пропускаем числа, не равные 3, 5 или 7
-            if ($generatedNumber != 3 && $generatedNumber != 5 && $generatedNumber != 7) {
+            if (!in_array($generatedNumber, [3, 5, 7])) {
                 continue;
             }
-
-            echo "<p>Generated number: $generatedNumber</p>";
-            break; // Останавливаем цикл, когда число равно 3, 5 или 7
+            break; // Останавливаем цикл, когда нужное число найдено
         }
     }
 }
-?>

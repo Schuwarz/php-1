@@ -10,7 +10,6 @@
 
 <body>
   <main class="main">
-
     <section class="section">
       <div class="wrapper">
         <div class="title">
@@ -32,11 +31,10 @@
           include __DIR__ . '/includes/logic.php';
           // Отображаем результат, если число было сгенерированно
           if ($generatedNumber !== null):
-            echo "<p class='result__text'>Randomated number: $generatedNumber </p>";
+            echo "<p class='result__text'>Randomated number: " . htmlspecialchars($generatedNumber) . "</p>";
           endif;
 
           // Подключаем файл с поздравлениями
-
           include __DIR__ . '/includes/Congratulations.php';
 
           // Подключаем файл для обработки сообщений
