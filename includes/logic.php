@@ -1,4 +1,14 @@
 <?php
+
+// function generatedNumber($loopType, $maxAttempts = 100) {
+//     for ($i = 0; $i < $maxAttempts; $i++) {
+//         $number = rand(1, 10);
+//         if (in_array($number, [3, 5, 7])) {
+//             return $number;
+//         }
+//     }
+// }
+
 $generatedNumber = null; // Переменная для сгенерированного числа
 $failureMessage = "Ahaha goofy, try again."; // Сообщение, если не удалось сгенерировать нужное число
 

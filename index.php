@@ -27,18 +27,29 @@
 
         <div class="result">
           <?php
-          // Подключаем файл с логикой генерации числа
+
+          //Автозагрузка классов
+          spl_autoload_register(function ($className) {
+            //Преобразуем имя класса в путь к файлу
+            $file = __DIR__ . '/classes/' . $className . '.php';
+
+            //Если файл существует, подключаем его
+            if (file_exists($file)) {
+              require_once $file;
+            } else {
+              die("Class $className not found.");
+            }
+          });
+
+          //Подключаем логики и других файлов
           include __DIR__ . '/includes/logic.php';
+          include __DIR__ . '/includes/congratulations.php';
+          include __DIR__ . '/includes/messages.php';
+
           // Отображаем результат, если число было сгенерированно
           if ($generatedNumber !== null):
             echo "<p class='result__text'>Randomated number: " . htmlspecialchars($generatedNumber) . "</p>";
           endif;
-
-          // Подключаем файл с поздравлениями
-          include __DIR__ . '/includes/Congratulations.php';
-
-          // Подключаем файл для обработки сообщений
-          include __DIR__ . '/includes/messages.php';
 
           ?>
         </div>
